@@ -1,0 +1,27 @@
+      
+[
+    {
+        "id":"0001",
+        "name":"我的报名",
+        "url":"src/bm/bm.html",
+		"icon":"layui-icon-user"
+    },
+    {
+        "id":"0003",
+        "name":"缴费清单",
+        "url":"src/jf/jf.html",
+		"icon":"layui-icon-form"
+    },
+    {
+        "id":"0002",
+        "name":"实践课报考",
+        "url":"src/bk/bk.html",
+		"icon":"layui-icon-file-b"
+    },
+    {
+        "id":"0004",
+        "name":"考场查询",
+        "url":"src/cx/cx.html",
+		"icon":"layui-icon-search"
+    }
+]
