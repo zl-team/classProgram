@@ -12,14 +12,16 @@
 				height: 48px;
 				border: 0px;
 			}
-
 			.biaotilan li {
 				height: 48px;
 				font-size: 15px;
 			}
-
 			.biaotilan .layui-this {
 				background: #fff;
+			}
+			
+			.first-tab i.layui-tab-close{
+				display:none!important;
 			}
 		</style>
 	</head>
@@ -42,7 +44,7 @@
 			<div class="layui-body" style="overflow: hidden;">
 				<div class="layui-tab" lay-filter="test1" lay-allowClose="true">
 					<ul class="layui-tab-title layui-bg-black biaotilan">
-						<li id="zhuye" class="layui-this">主页</li>
+						<li id="zhuye" class="layui-this first-tab" lay-id="0000">主页</li>
 						<!-- 
 				 标题栏选项卡动态添加区域
 				 -->
@@ -70,10 +72,6 @@
 				layui.use('element', function() {
 					var element = layui.element;
 					getDataMode();
-					element.render('tab', 'test1');
-					element.render('nav');
-					$("#zhuye i").remove();
-
 					// 选项卡增删切换模块
 					var active = {
 						tabAdd: function(url, _id, name) {
@@ -83,8 +81,7 @@
 									content: "<iframe scrolling='yes' width='100%' height='100%' src=" + url +" style='margin: 0px; border: 0px;'></iframe>",
 									id: _id
 								}),
-								element.render('tab', 'test1');
-							$("#zhuye i").remove();
+							element.render('tab', 'test1');
 						},
 						tabChange: function(_id) {
 							//切换到指定Tab项
@@ -120,6 +117,7 @@
 						active.tabChange(dataid.attr("data-id"));
 					});
 				});
+				
 			</script>
 	</body>
 </html>
